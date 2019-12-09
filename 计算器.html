@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{margin: 0;padding: 0;}
+        .box{width: 290px;height: 470px;margin: 100px auto;border: 2px solid #000;border-radius: 45px;background: #000000}
+        .one{list-style: none;float: left;width:50px;height:50px;margin: 10px;border: 1px solid #000000;
+                border-radius: 45px;cursor: pointer;text-align: center;
+                color: #F5FFFA;
+                line-height: 50px;font-weight: bold;font-size: 25px;background-color: #696969}
+        .two{list-style: none;float: left;width:120px;height:50px;margin: 10px;border: 1px solid #000000;
+                border-radius: 45px;cursor: pointer;
+                color: #F5FFFA;
+                text-align: center;
+                line-height: 50px;font-weight: bold;font-size: 25px;background-color: #696969;}
+        .the{list-style: none;float: left;width:50px;height:50px;margin: 10px;border: 1px solid #000000;
+                border-radius: 45px;color: #F5FFFA;cursor: pointer;text-align: center;
+                line-height: 50px;font-weight: bold;font-size: 25px;
+                background-color: #FF8C00}
+        .for{list-style: none;float: left;width:50px;height:50px;margin: 10px;border: 1px solid #000000;
+                border-radius: 45px;background: #eee;cursor: pointer;text-align: center;
+                line-height: 50px;font-weight: bold;font-size: 25px;
+                background-color: #F5F5DC}               
+        input{width: 285px;height: 50px;font-size: 20px;text-align: right;outline: none;border: none;padding-right: 5px;border-radius: 45px;
+            }
+        .txt1{color: #F5FFFA;background: #000000}
+        .txt2{border-bottom: 1px solid #000;color: #F5FFFA;background: #000000 }
+        .list li:hover{background: #FFE4E1;}
+    </style>
+    <link rel="stylesheet" href="./css/layui.css">
+    <script src="layui.all.js"></script>
+    <script src="./layui.js"></script>
+</head>
+<body>
+    <ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item"><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A1.html">个人简介</a></li>
+  <li class="layui-nav-item"><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/%E5%AE%B6%E4%B9%A1.html">家乡</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;" class="layui-this">作品展示</a>
+    <dl class="layui-nav-child layui-this"> <!-- 二级菜单 -->
+      <dd><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/%E6%8B%BC%E5%9B%BE%E6%B8%B8%E6%88%8F.html">拼图游戏</a></dd>
+      <dd><a href="">计算器</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/summary.html">前端课程总结</a></li>
+  <li class="layui-nav-item" style="float: right;">曹帅贤      08182784 </li>
+</ul>
+    <div class="box">
+        <input type="text" class="txt1">
+        <input type="text" class="txt2" value="0">
+        <ul class="list">
+            <li class="for">AC</li>
+            <li class="for">^</li>
+            <li class="for">进制</li>
+            <li class="the">÷</li>
+            <li class="one">7</li>
+            <li class="one">8</li>
+            <li class="one">9</li>
+            <li class="the">×</li>
+            <li class="one">4</li>
+            <li class="one">5</li>
+            <li class="one">6</li>
+            <li class="the">-</li>
+            <li class="one">1</li>
+            <li class="one">2</li>
+            <li class="one">3</li>
+            <li class="the">+</li>
+            <li class="two";>0</li>
+            <li class="one">.</li>
+            <li class="the">=</li>
+        </ul>
+    </div>
+    <script>
+        //获取元素
+        var oTxt1 = document.getElementsByClassName("txt1")[0];
+        var oTxt2 = document.getElementsByClassName("txt2")[0];
+        var oList = document.getElementsByClassName("list")[0];
+        //创建对象，用来保存每次输入的数和计算符号
+        var obj = {};
+        //设置一个开关，识别负号和减号
+        var bStop = false;
+        //函数执行
+        calculator();
+        //计算器
+        function calculator() {
+            oList.addEventListener("click", function (e) {
+                //事件源对象，获取每次点击的内容
+                var even = e || event;
+                var target = e.target || e.srcElement;
+                //保存每次点击的内容
+                var num = target.innerHTML;
+                //一轮计算之后，第二轮输入
+                if (obj.d) {
+                    oTxt1.value = "";
+                    oTxt2.value = "";
+                    obj = {};
+                    obj.d = false;
+                }
+                //当输入的数值为小数，且比0还小时
+                if (oTxt2.value === "0" && num != ".") {
+                    oTxt2.value = "";
+                }
+                oTxt2.value += num;
+                //清零
+                if (num == "AC") {
+                    oTxt1.value = "";
+                    oTxt2.value = 0;
+                    obj = {};
+                }
+                //获取输入的数值
+                value(num);
+            }, false)
+        }
+        //变量赋值
+        function value(code) {
+            //当输入为等于号的时候
+            if (code == "=") {
+                //保存第二个输入的数
+                obj.b = parseFloat(oTxt2.value);
+                oTxt1.value += oTxt2.value;
+                add(obj);
+                //当第一轮计算结束之后，给一个开关，第二轮输入的时候，
+                //不需要清零，也不会影响第二轮输入（以输入等号为一轮计算结束）
+                obj.d = true;
+                //将负号开关重置，不影响下次输入
+                bStop = false;
+            }
+            //当连续两次输入减号的时候，第二次输入的为负号，并将开关关上
+            if (bStop) {
+                bStop = false;
+                return;
+            }
+            if (code == "+" || code == "-" || code == "×" || code == "÷"||code=="进制"||code=="^") {
+ 
+                //在不输入等号的情况下，输入计算符号也可以计算上一轮的结果
+                if (obj.c) {
+                    obj.b = parseFloat(oTxt2.value);
+                    add(obj);
+                    oTxt1.value = oTxt2.value + code;
+                    oTxt2.value = "";
+                    //将上一轮计算的结果保存在下一轮的第一个数
+                    obj.a = parseFloat(oTxt1.value);
+                    //保存计算符号
+                    obj.c = code;
+                    //将负号开关打开
+                    bStop = true;
+                    return;
+                }
+                //计算器刚启动的时候或者是一轮计算过后，输入的第一个减号即为负号
+                if (oTxt2.value == "-") return;
+                oTxt1.value = oTxt2.value;
+                oTxt2.value = "";
+                //保存第一个输入的数
+                obj.a = parseFloat(oTxt1.value);
+                //保存输入的计算符号
+                obj.c = code;
+                //将负号开关打开
+                bStop = true;
+            }
+        }
+        //数值计算
+        function add(obj) {
+            switch (obj.c) {
+                case "^":
+              for (var i = obj.b , q=obj.a; i > 1; i--) {
+                 q=q*obj.a;
+              }
+                    oTxt2.value = q;
+                    break;
+                case "进制":
+                    oTxt2.value = parseInt(obj.a).toString(obj.b);
+                    break;
+                case "+":
+                    oTxt2.value = obj.a + obj.b;
+                    break;
+                case "-":
+                    oTxt2.value = obj.a - obj.b;
+                    break;
+                case "×":
+                    oTxt2.value = obj.a * obj.b;
+                    break;
+                case "÷":
+                    if (Number.isNaN(obj.a / obj.b)) {
+                        oTxt2.value = "被除数不能为0";
+                    } else {
+                        oTxt2.value = obj.a / obj.b;
+                    }
+                    break;
+            }
+        }
+    </script>
+    <script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+layui.use('carousel', function(){
+  var carousel = layui.carousel;
+  //建造实例
+  carousel.render({
+    elem: '#test1'
+    ,width: '100%' //设置容器宽度
+    ,arrow: 'always' //始终显示箭头
+    //,anim: 'updown' //切换动画方式
+  });
+});
+</script>
+</body>
+</html>

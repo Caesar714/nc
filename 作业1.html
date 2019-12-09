@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="./css/layui.css">
+	<link rel="stylesheet" href="111.css">
+    <script src="layui.all.js"></script>
+    <script src="./layui.js"></script>
+</head>
+<body>
+<ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item layui-this"><a href="">个人简介</a></li>
+  <li class="layui-nav-item"><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/%E5%AE%B6%E4%B9%A1.html">家乡</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">作品展示</a>
+    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+      <dd><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/%E6%8B%BC%E5%9B%BE%E6%B8%B8%E6%88%8F.html">拼图游戏</a></dd>
+      <dd><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/%E8%AE%A1%E7%AE%97%E5%99%A8.html">计算器</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="file:///C:/Users/Lenovo/Desktop/web%E5%89%8D%E7%AB%AF%E4%BD%9C%E4%B8%9A/summary.html">前端课程总结</a></li>
+  <li class="layui-nav-item" style="float: right;">曹帅贤      08182784 </li>
+</ul>
+  <div class="layui-carousel" id="test1" interval="800">
+    <div carousel-item>
+      <div><img src="photo/文艺部1.jpg" alt="" style="height: 280px;width: 33%; ">
+      	   <img src="photo/文艺部2.jpg" alt="" style="height: 280px;width: 33%; ">
+      	   <img src="photo/文艺部3.jpg" alt="" style="height: 280px;width: 33%; ">
+      	</div>
+      <div><img src="photo/库里.jpg" alt="" style="height: 280px;width: 33%; ">
+      	   <img src="photo/欧文.jpg" alt="" style="height: 280px;width: 33%; ">
+      	   <img src="photo/哈登.jpg" alt="" style="height: 280px;width: 33%; ">
+      	</div>
+      <div><img src="photo/life1.jpg" alt="" style="height: 280px;width: 33%; ">
+      	   <img src="photo/life2.jpg" alt="" style="height: 280px;width: 33%; ">
+      	   <img src="photo/life3.jpg" alt="" style="height: 280px;width: 33%; ">
+      	</div>
+    </div>
+  </div>
+  <div class="left">
+  	<img class="photo" src="photo/person.png" alt="" >
+    <p class="one">曹帅贤</p>
+    <p class="simple">出生日期：2000年11月24日</p>
+    <p class="simple">性别：男</p>
+    <p class="simple">籍贯：河北省邯郸市</p>
+    <p class="simple">专业：计算机科学与技术</p>
+    <p class="simple">学号：08182784</p>
+    <p class="simple">政治面貌：共青团员</p>
+    <p class="simple">电话：19851625521</p>
+    <p class="simple">邮箱：786353634@qq.com</p>
+  </div>
+  <div class="main">
+    <div class="first">
+      <i class="layui-icon layui-icon-snowflake">   学习经历</i>
+    </div>
+       <ul class="layui-timeline">
+         <li class="layui-timeline-item">
+          <i class="layui-icon layui-icon-next" style="color: #48D1CC;"></i>
+        <div class="layui-timeline-content layui-text" style="padding-left: 50px;">
+            <h3 class="layui-timeline-title">2006.9.1~2012.7.1</h3>
+             <p>
+        邯郸市展览路小学
+      </p>
+    </div>
+  </li>
+  <li class="layui-timeline-item">
+    <i class="layui-icon layui-icon-next" style="color: #48D1CC;"></i>
+    <div class="layui-timeline-content layui-text" style="padding-left: 50px;">
+      <h3 class="layui-timeline-title">2012.9.1~2015.7.1</h3>
+      <p>邯郸市育华中学</p>
+    </div>
+  </li>
+  <li class="layui-timeline-item">
+    <i class="layui-icon layui-icon-next" style="color: #48D1CC;"></i>
+    <div class="layui-timeline-content layui-text" style="padding-left: 50px;">
+      <h3 class="layui-timeline-title">2015.9.1~2018.7.1</h3>
+      <p>
+        邯郸市第一中学
+      </p>
+    </div>
+  </li>
+  <li class="layui-timeline-item">
+    <i class="layui-icon layui-icon-next" style="color: #48D1CC;"></i>
+    <div class="layui-timeline-content layui-text" style="padding-left: 50px;">
+      <div class="layui-timeline-title">2018.9.1~今</div>
+      <p>中国矿业大学计算机科学与技术学院</p>
+    </div>
+  </li>
+</ul>
+<div class="second">
+   <i class="layui-icon layui-icon-snowflake">   自我评价</i>
+</div>
+<i class="layui-icon layui-icon-next" style="color: #48D1CC;"></i>
+<p style="margin-left: 60px;">乐观向上，活泼开朗<img src="images/face/7.gif" alt=""><img src="images/face/7.gif" alt=""><img src="images/face/7.gif" alt=""></p>
+
+  </div>
+ 
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+layui.use('carousel', function(){
+  var carousel = layui.carousel;
+  //建造实例
+  carousel.render({
+    elem: '#test1'
+    ,width: '100%' //设置容器宽度
+    ,arrow: 'always' //始终显示箭头
+    //,anim: 'updown' //切换动画方式
+  });
+});
+</script>
+</body>
+</html>
