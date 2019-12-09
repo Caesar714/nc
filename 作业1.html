@@ -4,15 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>首页</title>
-	<link rel="stylesheet" href="https://raw.githack.com/Caesar714/nc/master/css/layui.css">
+    <link rel="stylesheet" href="https://raw.githack.com/Caesar714/nc/master/css/layui.css">
 	<link rel="stylesheet" href="https://raw.githack.com/Caesar714/nc/master/111.css">
     <script src="https://raw.githack.com/Caesar714/nc/master/css/layui.all.js"></script>
     <script src="https://raw.githack.com/Caesar714/nc/master/layui.js"></script>
 </head>
 <body>
-<ul class="layui-nav" lay-filter="">
-  <li class="layui-nav-item layui-this"><a href="">个人简介</a></li>
-  <li class="layui-nav-item"><a href="https://caesar714.github.io/nc/家乡.html">家乡</a></li>
+	<ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item"><a href="">个人简介</a></li>
+  <li class="layui-nav-item layui-this"><a href="https://caesar714.github.io/nc/家乡.html">家乡</a></li>
   <li class="layui-nav-item">
     <a href="javascript:;">作品展示</a>
     <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -98,11 +98,6 @@
   </div>
  
 <script>
-layui.use('element', function(){
-  var element = layui.element;
-  
-  //…
-});
 layui.use('carousel', function(){
   var carousel = layui.carousel;
   //建造实例
@@ -113,6 +108,11 @@ layui.use('carousel', function(){
     //,anim: 'updown' //切换动画方式
   });
 });
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});	
 </script>
 </body>
 </html>
