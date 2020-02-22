@@ -1,0 +1,350 @@
+.date0 {
+    font-size: 12px;
+    line-height: 33px;
+    color: #3c3c3c;
+}
+.fnav {
+    float: right;
+    line-height: 33px;
+}
+.wp_nav {
+    display: block;
+    margin: 0;
+    padding: 0;
+    display: block;
+    *zoom: 1;
+
+}
+.wp_nav .nav-item {
+    display: inline-block;
+    float: left;
+    position: relative;
+    vertical-align: bottom;
+
+}
+.wp_nav * {
+    margin: 0;
+    padding: 0;
+
+}
+.wp_nav .nav-item a {
+    font-family: "Microsoft Yahei";
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    color: #3c3c3c;
+    font-size: 12px;
+    padding: 0;
+}
+.wp_nav .nav-item a span.item-name {
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.wp_nav .nav-item .mark {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+#data{
+	height: 33px;
+	background-color: #efefef;
+}
+.riqi{
+	float: left;
+}
+body{
+	margin:0px;
+}
+#logo .inner {
+    height: 111px;
+    background: #ffffff url(head.png);
+    background-repeat: no-repeat;
+    margin:0 auto;
+    width: 1000px;
+    }
+.sitelogo {
+    float: left;
+    padding-top: 20px;
+}
+.searchx {
+    float: right;
+    padding-top: 70px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#keyword {
+    height: 30px!important;
+    width: 175px!important;
+    border: 1px solid #173b7d;
+    padding: 0px 5px;
+    line-height: 30px;
+}
+.wp_search .search {
+    background: url(search.png) left center no-repeat;
+    height: 32px;
+    width: 39px;
+}
+#top .inner {
+    background: #579ace;
+    height: 44px;
+    margin:0 auto;
+    width: 1000px;
+}
+#top {
+    height: 44px;
+    background: #00b7ee;
+}
+#wp_nav_w3 .wp_nav .nav-item a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 6px 8px;
+}
+.menu{
+	border: 1px solid #89b8dd;
+	width: 222px;
+    float: left;
+    display: inline;
+    min-height: 410px;
+    margin: 18px 0 18px 10px;
+}
+.banner-200-blue {
+    width: 222px;
+}
+.menu-head {
+    width: 100%;
+    height: 46px;
+    background: #579ace;
+}
+#container .listpage-inner .mod1 {
+    margin: 0px auto;
+    width: 100%;
+    overflow: hidden;
+}
+.inner{
+	    margin:0 auto;
+    width: 1000px;
+}
+.menu-head h3.col-name {
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+    font-weight: normal;
+    font-family: "Microsoft yahei";
+    margin: 0;
+}
+.col-name-text {
+    display: block;
+    line-height: 46px;
+}
+.conl_name_box {
+    padding: 0px 5px 0px 30px;
+}
+.news {
+    width: 738px;
+    float: right;
+    margin: 18px 10px 18px 0;
+}
+.news-head {
+    margin: 0px auto;
+    height: 44px;
+    border-bottom: 1px solid #e0e0e0;
+}
+ol, ul {
+    list-style: none;
+}
+.col-metas{
+	margin: 0;
+}
+.col-metas .col-path {
+    display: inline;
+    white-space: nowrap;
+    height: 46px;
+    line-height: 46px;
+    font-size: 12px;
+    text-align: right;
+    color: #000;
+    float: right;
+    margin: 0px 10px 0px 0px;
+    font-family: "Microsoft YaHei";
+
+}
+.col-metas .col-path A {
+    color: #444444;
+}
+.possplit {
+    width: 15px;
+}
+.col-metas .col-title {
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.col-metas .col-title h2 {
+    display: inline-block;
+    font-size: 19px;
+    color: #c4180b;
+    line-height: 43px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    border-bottom: 3px solid #dfd2b1;
+    font-weight: 500;
+    margin: 0px;
+    float: left;
+}
+.news-body {
+    padding: 0px 0px 10px 0px;
+    margin: 0px auto;
+    background: url(../images/col_right_bottom.gif) 0px bottom no-repeat;
+    min-height: 500px;
+}
+.news-list {
+    padding: 20px 10px 30px 10px;
+    background: url(../images/col_right_bg.gif) center repeat-y;
+}
+.wp_article_list {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 0;
+}
+.col-news-list .wp_article_list .list_item {
+    height: 35px;
+    line-height: 35px;
+}
+.wp_article_list .list_item {
+    border-bottom: none;
+    height: 26px;
+    line-height: 26px;
+    font-family: "Microsoft Yahei";
+}
+.wp_article_list .list_item .pr_fields {
+    display: inline;
+    float: left;
+}
+.wp_article_list .list_item .ex_fields {
+    display: inline;
+    float: right;
+    color: #212121;
+    font-size: 12px;
+}
+.news-list .wp_article_list .list_item .Article_Index {
+    width: 2px;
+    background: url(../images/li.png) left center no-repeat;
+    margin: 10px 7px 2px 2px;
+}
+}
+.news-list .wp_article_list .list_item .Article_Title {
+    margin: 0px;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+}
+.news-list .wp_article_list .list_item .Article_Title a {
+    font-size: 15px;
+}
+.news-list .wp_article_list .list_item .Article_PublishDate {
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
+    color: #212121;
+    font-size: 12px;
+    font-family: "Microsoft Yahei";
+}
+.news-list .wp_article_list .list_item {
+    height: 35px;
+    line-height: 35px;
+}
+.wp_article_list .list_item {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px dashed #ccc;
+    vertical-align: top;
+}
+.wp_paging {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    font-family: 'Microsoft Yahei', Verdana, Geneva, sans-serif;
+    color: #494949;
+    float: right;
+}
+.wp_paging li {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    margin-top: 5px;
+}
+.wp_paging li span, .wp_paging li a {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.wp_paging li em {
+    font-style: normal;
+}
+.wp_paging li a {
+    cursor: pointer;
+    color: #666;
+    line-height: 25px;
+    height: 25px;
+}
+.wp_paging li span, .wp_paging li a {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.wp_paging li a span {
+    margin: 0;
+}
+.wp_paging li span, .wp_paging li a {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.wp_paging li input {
+    font-size: 12px;
+    *font-size: 100%;
+    width: 24px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    margin-top: 4px;
+    text-align: center;
+}
+#foot {
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    background: #0068b7;
+}
+#foot p {
+    color: #343434;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    font-family: "Microsoft Yahei";
+}
+.banq {
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 微软雅黑;
+}
+
